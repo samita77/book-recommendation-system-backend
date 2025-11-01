@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Panel</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="flex flex-col min-h-screen bg-gray-100">
+    <nav class="bg-gray-800 p-4 text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/admin/dashboard" class="text-lg font-bold">Admin Panel</a>
+            <div>
+                <a href="/admin/authors" class="px-3 hover:text-gray-300">Authors</a>
+                <a href="/admin/books" class="px-3 hover:text-gray-300">Books</a>
+                <a href="/admin/editions" class="px-3 hover:text-gray-300">Editions</a>
+                <a href="/admin/users" class="px-3 hover:text-gray-300">Users</a>
+                <a href="/admin/publishers" class="px-3 hover:text-gray-300">Publishers</a>
+                <a href="/admin/logout" class="px-3 hover:text-gray-300">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- main content starts -->
+    <main class="flex-grow">

@@ -1,0 +1,61 @@
+{
+    "authors":[
+        {
+            "id":1,
+            "name":"A.M. Strickland",
+            "books":["In the Ravenous Dark","Beyond the Black Door","Court of the Undying Seasons","Exquisite Ruin(The Labyrinth, #1)","Lady Dragon"],
+            "description":"A.M. Strickland was a bibliophile who wanted to be an author before she knew what either of those words meant. She splits her time between Alaska and Spain with her spouse, her pugs, and her piles of books. She loves traveling, dancing, tattoos, and writing stories about sympathetic monsters. She is the author of Court of the Undying Seasons, In the Ravenous Dark, and Beyond the Black Door.",
+            "image":"https://images.gr-assets.com/authors/1614692401p5/18633093.jpg"   
+        },
+        {
+            "id":2,
+            "name":"Suzanne Collins",
+            "born":"August 11, 1962",
+            "placeOfBirth":"Hartford, Connecticut, USA",
+            "genre":["Fiction","Young Adult","Science Fiction & Fantasy"],
+            "books":["The Hunger Games(The Hunger Games, #1)","Catching Fire (The Hunger Games, #2)","Mockingjay (The Hunger Games, #3)","The Ballad of Songbirds and Snakes (The Hunger Games, #0)","Sunrise on the Reaping(The Hunger Games, #0.5)","Gregor the Overlander (The Underland Chronicles, #1)","Gregor and the Prophecy of Bane (The Underland Chronicles, #2)","Gregor and the Curse of the Warmbloods (The Underland Chronicles, #3)","Gregor and the Marks of Secret (The Underland Chronicles, #4)","Gregor and the Code of Claw (The Underland Chronicles, #5)"],
+            "description":"Since 1991, Suzanne Collins has been busy writing for children’s television. She has worked on the staffs of several Nickelodeon shows, including the Emmy-nominated hit Clarissa Explains it All and The Mystery Files of Shelby Woo. For preschool viewers, she penned multiple stories for the Emmy-nominated Little Bear and Oswald. She also co-wrote the critically acclaimed Rankin/Bass Christmas special, Santa, Baby! Most recently she was the Head Writer for Scholastic Entertainment’s Clifford’s Puppy Days.\nWhile working on a Kids WB show called Generation O! she met children’s author James Proimos, who talked her into giving children’s books a try.\nThinking one day about Alice in Wonderland, she was struck by how pastoral the setting must seem to kids who, like her own, lived in urban surroundings. In New York City, you’re much more likely to fall down a manhole than a rabbit hole and, if you do, you’re not going to find a tea party. What you might find...? Well, that’s the story of Gregor the Overlander, the first book in her five-part series, The Underland Chronicles. Suzanne also has a rhyming picture book illustrated by Mike Lester entitled When Charlie McButton Lost Power.\nShe currently lives in Connecticut with her family and a pair of feral kittens they adopted from their backyard.\nThe books she is most successful for in teenage eyes are The Hunger Games, Catching Fire and Mockingjay. These books have won several awards, including the GA Peach Award.",
+            "image":"https://images.gr-assets.com/authors/1630199330p5/153394.jpg"   
+        },
+
+        {
+            "id":3,
+            "name":"Veronica Roth",
+            "placeOfBirth":"The United States",
+            "website":"http://veronicarothbooks.com/",
+            "genre":["Science Fiction", "Young Adult", "Fantasy"],
+            "books":["Divergent (Divergent, #1)","Insurgent (Divergent, #2)","Allegiant (Divergent, #3)","Four: A Divergent Collection","Carve the Mark (Carve the Mark, #1)","The Transfer (Divergent, #0.1)","The Fates Divide (Carve the Mark, #2)","Chosen Ones","Arch-Conspirator","When Among Crows","Poster Girl"],
+            "description":"Veronica Roth is the New York Times best-selling author of When Among Crows, Arch-Conspirator, Poster Girl, Chosen Ones, the Carve the Mark series, and the Divergent series. She lives in Chicago, Illinois with her husband and dog.",
+            "image":"https://images.gr-assets.com/authors/1754100907p5/4039811.jpg"   
+        },
+
+        {
+            "id":4,
+            "name":"Rick Riordan",
+            "placeOfBirth":"San Antonio, Texas, The United States",
+            "website":"http://www.rickriordan.com/",
+            "genre":["Children's","Science Fiction & Fantasy"],
+            "books":["The Lightning Thief (Percy Jackson & the Olympians, #1)","The Sea of Monsters (Percy Jackson & the Olympians, #2)","The Titan's Curse (Percy Jackson & the Olympians, #3)","The Battle of the Labyrinth (Percy Jackson & the Olympians, #4)","The Last Olympian (Percy Jackson & the Olympians, #5)","The Lost Hero (Heroes of Olympus, #1)","The Son of Neptune (Heroes of Olympus, #2)","The Mark of Athena (Heroes of Olympus, #3)","The House of Hades (Heroes of Olympus, #4)","The Blood of Olympus (Heroes of Olympus, #5)","The Red Pyramid (The Kane Chronicles, #1)","The Throne of Fire (The Kane Chronicles, #2)","The Serpent's Shadow (The Kane Chronicles, #3)","Magnus Chase and the Gods of Asgard: The Sword of Summer (Magnus Chase and the Gods of Asgard, #1)","Magnus Chase and the Gods of Asgard: The Hammer of Thor (Magnus Chase and the Gods of Asgard, #2)","Magnus Chase and the Gods of Asgard: The Ship of the Dead (Magnus Chase and the Gods of Asgard, #3)","Percy Jackson's Greek Gods","Percy Jackson's Greek Heroes","Daughter of the Deep"],
+            "description":"Rick Riordan is the #1 New York Times bestselling author of many books, including the Percy Jackson series",
+            "image":"https://www.goodreads.com/photo/author/15872.Rick_Riordan"   
+        },
+
+        {
+            "id":5,
+            "name":"James Dashner",
+            "website":"http://www.jamesdashner.com/",
+            "description":"James is the author of THE MAZE RUNNER trilogy and THE 13TH REALITY series. He also published a series (beginning with A DOOR IN THE WOODS) with a small publisher several years ago. He lives and writes in the Rocky Mountains.",
+            "image":"https://images.gr-assets.com/authors/1473791260p5/348878.jpg"   
+        },
+
+        {
+            "id":6,
+            "name":"Sarah J. Maas",
+            "placeOfBirth":"New York, NY, The United States",
+            "website":"http://sarahjmaas.com/",
+            "genre":["Fantasy", "Romance"],
+            "description":"Sarah J. Maas is the #1 bestselling author of the Throne of Glass, Court of Thorns and Roses, and Crescent City series. Her books have sold millions of copies and are published in thirty-eight languages. She lives in New York City with her family.",
+            "image":"https://images.gr-assets.com/authors/1582137198p5/3433047.jpg"   
+        }
+    ]
+}

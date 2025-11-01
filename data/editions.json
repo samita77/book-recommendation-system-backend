@@ -1,0 +1,350 @@
+{
+    "editions": [
+        {
+            "id": 301,
+            "bookId": 201,
+            "format": "Unknown Binding",
+            "year": "August 26, 2025",
+            "publisher": "Feiweil & Friends",
+            "asin": "B0DN8C43T1",
+            "language": "English"
+        },
+        {
+            "id": 302,
+            "bookId": 201,
+            "pages": 352,
+            "format": "Hardcover",
+            "year": "August 26, 2025",
+            "publisher": "Feiweil & Friends",
+            "ISBN": "9781250325907 (ISBN10: 1250325900)",
+            "asin": "B0DN8C43T1",
+            "language": "English"
+        },
+        {
+            "id": 303,
+            "bookId": 201,
+            "pages": 345,
+            "format": "Kindle Edition",
+            "year": "August 26, 2025",
+            "publisher": "Feiweil & Friends",
+            "ISBN": "9781250325914 (ISBN10: 1250325919)",
+            "asin": "B0DL46WHHZ",
+            "language": "English"
+        },
+        {
+            "id": 304,
+            "bookId": 202,
+            "pages": 374,
+            "format": "Hardcover",
+            "year": "October 14, 2008",
+            "publisher": "Scholastic Press",
+            "ISBN": "9780439023481 (ISBN10: 0439023483)",
+            "asin": "0439023483",
+            "language": "English"
+        },
+        {
+            "id": 305,
+            "bookId": 202,
+            "pages": 374,
+            "format": "Kindle Edition",
+            "year": "September 1, 2009",
+            "publisher": "Scholastic Press",
+            "asin": "B0DLSZV3Q7",
+            "language": "English"
+        },
+        {
+            "id": 306,
+            "bookId": 202,
+            "pages": 374,
+            "format": "Paperback",
+            "year": "July 1, 2010",
+            "publisher": "Scholastic Inc",
+            "ISBN": "9780439023528 (ISBN10: 0439023521)",
+            "asin": "0439023521",
+            "language": "English"
+        },
+        {
+            "id": 307,
+            "bookId": 203,
+            "pages": 391,
+            "format": "Hardcover",
+            "year": "September 1, 2009",
+            "publisher": "Scholastic Press",
+            "ISBN": "9780439023498 (ISBN10: 0439023491)",
+            "asin": "0439023491",
+            "language": "English"
+        },
+        {
+            "id": 308,
+            "bookId": 203,
+            "pages": 439,
+            "format": "Kindle Edition",
+            "year": "June 3, 2010",
+            "publisher": "Scholastic Press",
+            "asin": "B003O86FMW",
+            "language": "English"
+        },
+        {
+            "id": 309,
+            "bookId": 203,
+            "pages": 391,
+            "format": "Kindle Edition",
+            "year": "June 3, 2010",
+            "publisher": "Scholastic Press",
+            "ISBN": "9780439023535 (ISBN10: 043902353X)",
+            "asin": "043902353X",
+            "language": "English"
+        },
+        {
+            "id": 310,
+            "bookId": 204,
+            "pages": 390,
+            "format": "Hardcover",
+            "year": "August 24, 2010",
+            "publisher": "Scholastic Press",
+            "ISBN": "9780439023511 (ISBN10: 0439023513)",
+            "asin": "0439023513",
+            "language": "English"
+        },
+        {
+            "id": 311,
+            "bookId": 204,
+            "pages": 339,
+            "format": "Kindle Edition",
+            "year": "August 24, 2010",
+            "publisher": "Scholastic Press",
+            "asin": "B003XF1XOQ",
+            "language": "English"
+        },
+        {
+            "id": 312,
+            "bookId": 204,
+            "pages": 390,
+            "format": "Paperback",
+            "year": "March 1, 2014",
+            "publisher": "Scholastic Press",
+            "ISBN": "9780545663267 (ISBN10: 0545663261)",
+            "asin": "0545663261",
+            "language": "English"
+        },
+        {
+            "id": 313,
+            "bookId": 205,
+            "pages": 487,
+            "format": "Paperback",
+            "year": "Februrary 28, 2012",
+            "publisher": "Katherine Tegen Books",
+            "ISBN": "9780062024039 (ISBN10: 0062024035)",
+            "asin": "0062024035",
+            "language": "English"
+        },
+        {
+            "id": 314,
+            "bookId": 205,
+            "pages": 487,
+            "format": "Hardcover",
+            "year": "April 25, 2011",
+            "publisher": "Katherine Tegen Books",
+            "ISBN": "9780062024022 (ISBN10: 0062024027)",
+            "asin": "0062024027",
+            "language": "English"
+        },
+        {
+            "id": 315,
+            "bookId": 205,
+            "pages": 342,
+            "format": "Ebook",
+            "year": "May 3, 2011",
+            "publisher": "Katherine Tegen Books",
+            "asin": "B0FSKYXBL3",
+            "language": "English"
+        },
+        {
+            "id": 316,
+            "bookId": 205,
+            "pages": 342,
+            "format": "Kindle Edition",
+            "year": "October 21, 2014",
+            "publisher": "HarperCollins",
+            "asin": "B00I2PH5V2",
+            "language": "English"
+        },
+        {
+            "id": 317,
+            "bookId": 206,
+            "pages": 525,
+            "format": "Hardcover",
+            "year": "May 1, 2012",
+            "publisher": "HarperCollins Children's Books",
+            "ISBN": "9780007442911 (ISBN10: 0007442912)",
+            "asin": "0007442912",
+            "language": "English"
+        },
+        {
+            "id": 318,
+            "bookId": 206,
+            "pages": 544,
+            "format": "Ebook",
+            "year": "May 1, 2012",
+            "publisher": "Katherine Tegen Books",
+            "asin": "B0FSKS48RS",
+            "language": "English"
+        },
+        {
+            "id": 319,
+            "bookId": 206,
+            "pages": 525,
+            "format": "Paperback",
+            "year": "May 1, 2012",
+            "publisher": "HarperCollins Children's Books",
+            "ISBN": "9780007442928 (ISBN10: 0007442920)",
+            "asin": "0007442920",
+            "language": "English"
+        },
+        {
+            "id": 320,
+            "bookId": 206,
+            "pages": 545,
+            "format": "Kindle Edition",
+            "year": "November 7, 2013",
+            "publisher": "HarperCollins Children's Books",
+            "ISBN": "(ISBN10: 0007537123)",
+            "asin": "B00DKEE2NY",
+            "language": "English"
+        },
+        {
+            "id": 321,
+            "bookId": 207,
+            "pages": 377,
+            "format": "Paperback",
+            "year": "March 1, 2006",
+            "publisher": "Disney Hyperion Books",
+            "ISBN": "9780786838653 (ISBN10: 0786838655)",
+            "asin": "0786838655",
+            "language": "English"
+        },
+        {
+            "id": 322,
+            "bookId": 207,
+            "pages": 396,
+            "format": "Ebook",
+            "year": "May 5, 2009",
+            "publisher": "Disney Hyperion",
+            "asin": "B0DWVM5L96",
+            "language": "English"
+        },
+        {
+            "id": 323,
+            "bookId": 207,
+            "pages": 396,
+            "format": "Kindle Edition",
+            "year": "May 2, 2009",
+            "publisher": "Disney Hyperion",
+            "asin": "B0DLRP9Z31",
+            "language": "English"
+        },
+        {
+            "id": 324,
+            "bookId": 207,
+            "pages": 387,
+            "format": "Hardcover",
+            "year": "May 2, 2009",
+            "publisher": "Disney-Hyperion",
+            "asin": "B0DZ7S92LS",
+            "language": "English"
+        },
+
+        {
+            "id": 325,
+            "bookId": 208,
+            "pages": 384,
+            "format": "Hardcover",
+            "year": "October 6, 2009",
+            "publisher": "Delacorte Press",
+            "ISBN": "9780385737944 (ISBN10: 0385737947)",
+            "asin": "0385737947",
+            "language": "English"
+        },
+
+        {
+            "id": 326,
+            "bookId": 208,
+            "pages": 386,
+            "format": "Kindle Edition",
+            "year": "October 6, 2009",
+            "publisher": "Delacorte Books for Young Readers",
+            "asin": "B002QE3CTY",
+            "language": "English"
+        },
+
+        {
+            "id": 327,
+            "bookId": 208,
+            "pages": 375,
+            "format": "Paperback",
+            "year": "August 24, 2010",
+            "publisher": "Delacorte Press",
+            "ISBN": "9780385737951 (ISBN10: 0385737955)",
+            "asin": "0385737955",
+            "language": "English"
+        },
+
+        {
+            "id": 328,
+            "bookId": 208,
+            "pages": 11,
+            "format": "Audio CD",
+            "year": "October 6, 2009",
+            "publisher": "Listening Library (Audio)",
+            "ISBN": "9780307582881 (ISBN10: 0307582884)",
+            "asin": "0307582884",
+            "language": "English"
+        },
+
+        {
+            "id": 329,
+            "bookId": 208,
+            "pages": 406,
+            "format": "Hardcover",
+            "year": "Februrary 14, 2023",
+            "publisher": "Bloomsbury Publishing",
+            "ISBN": "9781639730940 (ISBN10: 163973094X)",
+            "asin": "163973094X",
+            "language": "English"
+        },
+
+        {
+            "id": 330,
+            "bookId": 208,
+            "pages": 423,
+            "format": "Kindle Edition",
+            "year": "August 7, 2012",
+            "publisher": "Bloomsbury Publishing",
+            "asin": "B007N6JEII",
+            "language": "English"
+        },
+
+        {
+            "id": 331,
+            "bookId": 208,
+            "pages": 406,
+            "format": "Paperback",
+            "year": "May 7, 2013",
+            "publisher": "Bloomsbury YA",
+            "ISBN": "9781619630345 (ISBN10: 1619630346)",
+            "asin": "1619630346",
+            "language": "English"
+        },
+
+        {
+            "id": 331,
+            "bookId": 208,
+            "pages": 433,
+            "format": "Ebook",
+            "year": "AUgust 2, 2012",
+            "publisher": "Bloomsbury Children's",
+            "asin": "B0DWV3R3LY",
+            "language": "English"
+        }
+    ]
+}

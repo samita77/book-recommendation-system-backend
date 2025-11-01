@@ -1,0 +1,91 @@
+<%- include('../../partials/admin_header') %>
+
+<div class="container mx-auto p-4">
+    <h1 class="text-3xl font-bold mb-6">Add New Book</h1>
+
+    <form action="/admin/books" method="POST" class="bg-white p-6 rounded-lg shadow-md">
+        <div class="mb-4">
+            <label for="id" class="block text-gray-700 text-sm font-bold mb-2">ID:</label>
+            <input type="number" id="id" name="id" value="<%= book.id || '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" readonly disabled>
+        </div>
+        <div class="mb-4">
+            <label for="title" class="block text-gray-700 text-sm font-bold mb-2">Title:</label>
+            <input type="text" id="title" name="title" value="<%= book.title || '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+        </div>
+        <div class="mb-4">
+            <label for="description" class="block text-gray-700 text-sm font-bold mb-2">Description:</label>
+            <textarea id="description" name="description" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"><%= book.description || '' %></textarea>
+        </div>
+        <div class="mb-4">
+            <label for="authorid" class="block text-gray-700 text-sm font-bold mb-2">Author:</label>
+            <select id="authorid" name="authorid" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                <option value="">Select an Author</option>
+                <% authors.forEach(author => { %>
+                    <option value="<%= author.id %>" <%= book.authorid == author.id ? 'selected' : '' %>><%= author.name %></option>
+                <% }); %>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label for="editionid" class="block text-gray-700 text-sm font-bold mb-2">Edition:</label>
+            <select id="editionid" name="editionid" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                <option value="">Select an Edition</option>
+                <% editions.forEach(edition => { %>
+                    <option value="<%= edition.id %>" <%= book.edition && book.edition.id == edition.id ? 'selected' : '' %>>ID: <%= edition.id %>, Format: <%= edition.format %>, Year: <%= edition.year %></option>
+                <% }); %>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label for="publisherid" class="block text-gray-700 text-sm font-bold mb-2">Publisher:</label>
+            <select id="publisherid" name="publisherid" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                <option value="">Select a Publisher</option>
+                <% publishers.forEach(publisher => { %>
+                    <option value="<%= publisher.id %>" <%= book.publisherid == publisher.id ? 'selected' : '' %>><%= publisher.name %></option>
+                <% }); %>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label for="ratings" class="block text-gray-700 text-sm font-bold mb-2">Ratings:</label>
+            <input type="number" id="ratings" name="ratings" value="<%= book.ratings || '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="genre" class="block text-gray-700 text-sm font-bold mb-2">Genre (comma-separated):</label>
+            <input type="text" id="genre" name="genre" value="<%= book.genre ? book.genre.join(', ') : '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="image" class="block text-gray-700 text-sm font-bold mb-2">Image URL:</label>
+            <input type="text" id="image" name="image" value="<%= book.image || '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="year" class="block text-gray-700 text-sm font-bold mb-2">Year:</label>
+            <input type="text" id="year" name="year" value="<%= book.year || '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="literaryAwards" class="block text-gray-700 text-sm font-bold mb-2">Literary Awards (comma-separated):</label>
+            <input type="text" id="literaryAwards" name="literaryAwards" value="<%= book.literaryAwards ? book.literaryAwards.join(', ') : '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="originalTitle" class="block text-gray-700 text-sm font-bold mb-2">Original Title:</label>
+            <input type="text" id="originalTitle" name="originalTitle" value="<%= book.originalTitle || '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="series" class="block text-gray-700 text-sm font-bold mb-2">Series:</label>
+            <input type="text" id="series" name="series" value="<%= book.series || '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="setting" class="block text-gray-700 text-sm font-bold mb-2">Setting (comma-separated):</label>
+            <input type="text" id="setting" name="setting" value="<%= book.setting ? book.setting.join(', ') : '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="characters" class="block text-gray-700 text-sm font-bold mb-2">Characters (comma-separated):</label>
+            <input type="text" id="characters" name="characters" value="<%= book.characters ? book.characters.join(', ') : '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="flex items-center justify-between">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                Add Book
+            </button>
+            <a href="/admin/books" class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800">Cancel</a>
+        </div>
+    </form>
+</div>
+
+<%- include('../../partials/admin_footer') %>

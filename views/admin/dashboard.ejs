@@ -1,0 +1,28 @@
+<%- include('../partials/admin_header') %>
+
+<div class="container mx-auto p-4">
+    <h1 class="text-3xl font-bold mb-6">Admin Dashboard</h1>
+    <p class="mb-4">Welcome to the admin panel. Use the navigation to manage content.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/admin/authors" class="block p-6 bg-white rounded-lg shadow hover:bg-gray-50">
+            <h2 class="text-xl font-semibold mb-2">Manage Authors</h2>
+            <p class="text-gray-600">Add, edit, or delete authors.</p>
+        </a>
+        <a href="/admin/books" class="block p-6 bg-white rounded-lg shadow hover:bg-gray-50">
+            <h2 class="text-xl font-semibold mb-2">Manage Books</h2>
+            <p class="text-gray-600">Add, edit, or delete books.</p>
+        </a>
+        <a href="/admin/editions" class="block p-6 bg-white rounded-lg shadow hover:bg-gray-50">
+            <h2 class="text-xl font-semibold mb-2">Manage Editions</h2>
+            <p class="text-gray-600">Add, edit, or delete book editions.</p>
+        </a>
+        <a href="/admin/users" class="block p-6 bg-white rounded-lg shadow hover:bg-gray-50">
+            <h2 class="text-xl font-semibold mb-2">Manage Users</h2>
+            <p class="text-gray-600">View and manage user accounts.</p>
+        </a>
+        <!-- Add link for rating system here later -->
+    </div>
+</div>
+
+<%- include('../partials/admin_footer') %>

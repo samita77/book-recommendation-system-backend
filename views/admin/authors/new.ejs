@@ -1,0 +1,48 @@
+<%- include('../../partials/admin_header') %>
+
+<div class="container mx-auto p-4">
+    <h1 class="text-3xl font-bold mb-6">Add New Author</h1>
+
+    <form action="/admin/authors" method="POST" class="bg-white p-6 rounded-lg shadow-md">
+        <div class="mb-4">
+            <label for="id" class="block text-gray-700 text-sm font-bold mb-2">S.N.:</label>
+            <input type="number" id="id" name="id" value="<%= author.id || '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" readonly disabled>
+        </div>
+        <div class="mb-4">
+            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+            <input type="text" id="name" name="name" value="<%= author.name || '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+        </div>
+        <div class="mb-4">
+            <label for="born" class="block text-gray-700 text-sm font-bold mb-2">Born:</label>
+            <input type="text" id="born" name="born" value="<%= author.born || '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="placeOfBirth" class="block text-gray-700 text-sm font-bold mb-2">Place of Birth:</label>
+            <input type="text" id="placeOfBirth" name="placeOfBirth" value="<%= author.placeOfBirth || '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="genre" class="block text-gray-700 text-sm font-bold mb-2">Genre (comma-separated):</label>
+            <input type="text" id="genre" name="genre" value="<%= author.genre ? author.genre.join(', ') : '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="books" class="block text-gray-700 text-sm font-bold mb-2">Books (comma-separated titles):</label>
+            <input type="text" id="books" name="books" value="<%= author.books ? author.books.join(', ') : '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-4">
+            <label for="description" class="block text-gray-700 text-sm font-bold mb-2">Description:</label>
+            <textarea id="description" name="description" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"><%= author.description || '' %></textarea>
+        </div>
+        <div class="mb-4">
+            <label for="image" class="block text-gray-700 text-sm font-bold mb-2">Image URL:</label>
+            <input type="text" id="image" name="image" value="<%= author.image || '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="flex items-center justify-between">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                Add Author
+            </button>
+            <a href="/admin/authors" class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800">Cancel</a>
+        </div>
+    </form>
+</div>
+
+<%- include('../../partials/admin_footer') %>
