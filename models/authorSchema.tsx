@@ -1,4 +1,4 @@
-const Joi = require('joi');
+import Joi from 'joi';
 
 const authorSchema = Joi.object({
   id: Joi.number(),
@@ -18,4 +18,4 @@ const authorSchema = Joi.object({
   slug: Joi.string().allow('', null),
 });
 
-module.exports = authorSchema;
+export default authorSchema;

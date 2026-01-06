@@ -17,8 +17,9 @@
                         <th class="py-3 px-6 text-left">ID</th>
                         <th class="py-3 px-6 text-left">Title</th>
                         <th class="py-3 px-6 text-left">Author</th>
+                        <th class="py-3 px-6 text-left">Publisher</th>
                         <th class="py-3 px-6 text-left">Genre</th>
-                        <th class="py-3 px-6 text-left">Avg. Rating</th>
+                        <th class="py-3 px-6 text-left">Ratings (Count)</th>
                         <th class="py-3 px-6 text-left">Slug</th>
                         <th class="py-3 px-6 text-center">Actions</th>
                     </tr>
@@ -29,8 +30,12 @@
                             <td class="py-3 px-6 text-left whitespace-nowrap"><%= book.id %></td>
                             <td class="py-3 px-6 text-left"><%= book.title %></td>
                             <td class="py-3 px-6 text-left"><%= book.author %></td>
+                            <td class="py-3 px-6 text-left"><%= book.publisher || 'N/A' %></td>
                             <td class="py-3 px-6 text-left"><%= book.genre ? book.genre.join(', ') : 'N/A' %></td>
-                            <td class="py-3 px-6 text-left"><%= book.averageRating ? book.averageRating.toFixed(2) : 'N/A' %></td>
+                            <td class="py-3 px-6 text-left">
+    <%= book.averageRating ? book.averageRating.toFixed(2) : '0' %> 
+    <span class="text-xs text-gray-500">(<%= book.ratingsCount || 0 %>)</span>
+</td>
                             <td class="py-3 px-6 text-left"><%= book.slug || 'N/A' %></td>
                             <td class="py-3 px-6 text-center">
                                 <div class="flex item-center justify-center">

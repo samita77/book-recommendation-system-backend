@@ -21,35 +21,32 @@
             <select id="authorid" name="authorid" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
                 <option value="">Select an Author</option>
                 <% authors.forEach(author => { %>
-                    <option value="<%= author.id %>" <%= book.authorid == author.id ? 'selected' : '' %>><%= author.name %></option>
+                    <% 
+                        // Ultra Match: Compare ID, then Case-Insensitive Trimmed Name
+                        const bId = (book.authorid || "").toString().trim();
+                        const bName = (book.author || "").toString().toLowerCase().trim();
+                        const tId = (author.id || "").toString().trim();
+                        const tName = (author.name || "").toString().toLowerCase().trim();
+                        
+                        const isSelectedAuthor = (bId !== "" && bId === tId) || (bName !== "" && bName === tName);
+                    %>
+                    <option value="<%= author.id %>" <%= isSelectedAuthor ? 'selected' : '' %>><%= author.name %></option>
                 <% }); %>
             </select>
         </div>
+
         <div class="mb-4">
-            <label for="editionid" class="block text-gray-700 text-sm font-bold mb-2">Edition:</label>
-            <select id="editionid" name="editionid" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                <option value="">Select an Edition</option>
-                <% editions.forEach(edition => { %>
-                    <option value="<%= edition.id %>" <%= book.edition && book.edition.id == edition.id ? 'selected' : '' %>>ID: <%= edition.id %>, Format: <%= edition.format %>, Year: <%= edition.year %></option>
-                <% }); %>
-            </select>
-        </div>
-        <div class="mb-4">
-            <label for="publisherid" class="block text-gray-700 text-sm font-bold mb-2">Publisher:</label>
-            <select id="publisherid" name="publisherid" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                <option value="">Select a Publisher</option>
-                <% publishers.forEach(publisher => { %>
-                    <option value="<%= publisher.id %>" <%= book.publisherid == publisher.id ? 'selected' : '' %>><%= publisher.name %></option>
-                <% }); %>
-            </select>
+            <label for="publisher" class="block text-gray-700 text-sm font-bold mb-2">Publisher:</label>
+            <input type="text" id="publisher" name="publisher" value="<%= book.publisher || '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
         </div>
         <div class="mb-4">
             <label for="ratings" class="block text-gray-700 text-sm font-bold mb-2">Ratings:</label>
-            <input type="number" id="ratings" name="ratings" value="<%= book.ratings || '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <input type="number" id="ratings" name="ratings" value="<%= book.ratings || '' %>" step="0.01" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
         </div>
         <div class="mb-4">
             <label for="genre" class="block text-gray-700 text-sm font-bold mb-2">Genre (comma-separated):</label>
-            <input type="text" id="genre" name="genre" value="<%= book.genre ? book.genre.join(', ') : '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <% const genreVal = Array.isArray(book.genre) ? book.genre.join(', ') : (book.genre || ''); %>
+            <input type="text" id="genre" name="genre" value="<%= genreVal %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
         </div>
         <div class="mb-4">
             <label for="image" class="block text-gray-700 text-sm font-bold mb-2">Image URL:</label>
@@ -61,7 +58,8 @@
         </div>
         <div class="mb-4">
             <label for="literaryAwards" class="block text-gray-700 text-sm font-bold mb-2">Literary Awards (comma-separated):</label>
-            <input type="text" id="literaryAwards" name="literaryAwards" value="<%= book.literaryAwards ? book.literaryAwards.join(', ') : '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <% const awardsVal = Array.isArray(book.literaryAwards) ? book.literaryAwards.join(', ') : (book.literaryAwards || ''); %>
+            <input type="text" id="literaryAwards" name="literaryAwards" value="<%= awardsVal %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
         </div>
         <div class="mb-4">
             <label for="originalTitle" class="block text-gray-700 text-sm font-bold mb-2">Original Title:</label>
@@ -73,12 +71,92 @@
         </div>
         <div class="mb-4">
             <label for="setting" class="block text-gray-700 text-sm font-bold mb-2">Setting (comma-separated):</label>
-            <input type="text" id="setting" name="setting" value="<%= book.setting ? book.setting.join(', ') : '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <% const settingVal = Array.isArray(book.setting) ? book.setting.join(', ') : (book.setting || ''); %>
+            <input type="text" id="setting" name="setting" value="<%= settingVal %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
         </div>
         <div class="mb-4">
             <label for="characters" class="block text-gray-700 text-sm font-bold mb-2">Characters (comma-separated):</label>
-            <input type="text" id="characters" name="characters" value="<%= book.characters ? book.characters.join(', ') : '' %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <% const charactersVal = Array.isArray(book.characters) ? book.characters.join(', ') : (book.characters || ''); %>
+            <input type="text" id="characters" name="characters" value="<%= charactersVal %>" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
         </div>
+
+        <!-- Hidden input to store editions CSV/JSON -->
+        <input type="hidden" id="editionsJSON" name="editionsJSON" value='<%= JSON.stringify(book.editions || []) %>'>
+
+        <div class="mb-6">
+            <h2 class="text-xl font-bold mb-2">Manage Editions</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-gray-100 rounded">
+                    <thead>
+                        <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+                            <th class="py-2 px-4 text-left">Format</th>
+                            <th class="py-2 px-4 text-left">Published Year</th>
+                            <th class="py-2 px-4 text-left">Language</th>
+                            <th class="py-2 px-4 text-left">Pages</th>
+                            <th class="py-2 px-4 text-left">ISBN</th>
+                            <th class="py-2 px-4 text-left">ASIN</th>
+                            <th class="py-2 px-4 text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="editionsTable" class="text-gray-600 text-sm font-light">
+                        <!-- Rows will be injected by JS -->
+                    </tbody>
+                </table>
+            </div>
+            <button type="button" onclick="addEditionRow()" class="mt-2 bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-3 rounded text-sm">
+                + Add Edition
+            </button>
+        </div>
+
+        <script>
+            let editions = [];
+            try {
+                const hiddenVal = document.getElementById('editionsJSON').value;
+                if(hiddenVal) editions = JSON.parse(hiddenVal);
+            } catch(e) { console.error(e); }
+
+            const tableBody = document.getElementById('editionsTable');
+
+            function renderEditions() {
+                tableBody.innerHTML = '';
+                editions.forEach((ed, index) => {
+                    const tr = document.createElement('tr');
+                    tr.className = "border-b border-gray-200 hover:bg-gray-50";
+                    tr.innerHTML = `
+                        <td class="py-2 px-4"><input type="text" value="${ed.format || ''}" onchange="updateEdition(${index}, 'format', this.value)" class="w-full border rounded px-1"></td>
+                        <td class="py-2 px-4"><input type="text" value="${ed.publishedYear || ''}" onchange="updateEdition(${index}, 'publishedYear', this.value)" class="w-full border rounded px-1"></td>
+                        <td class="py-2 px-4"><input type="text" value="${ed.language || ''}" onchange="updateEdition(${index}, 'language', this.value)" class="w-full border rounded px-1"></td>
+                        <td class="py-2 px-4"><input type="number" value="${ed.pages || ''}" onchange="updateEdition(${index}, 'pages', this.value)" class="w-full border rounded px-1"></td>
+                        <td class="py-2 px-4"><input type="text" value="${ed.isbn || ''}" onchange="updateEdition(${index}, 'isbn', this.value)" class="w-full border rounded px-1"></td>
+                        <td class="py-2 px-4"><input type="text" value="${ed.asin || ''}" onchange="updateEdition(${index}, 'asin', this.value)" class="w-full border rounded px-1"></td>
+                        <td class="py-2 px-4 text-center">
+                            <button type="button" onclick="removeEdition(${index})" class="text-red-500 hover:text-red-700">Remove</button>
+                        </td>
+                    `;
+                    tableBody.appendChild(tr);
+                });
+                document.getElementById('editionsJSON').value = JSON.stringify(editions);
+            }
+
+            function addEditionRow() {
+                editions.push({ format: 'Paperback', publishedYear: '', language: 'English', pages: 0, isbn: '', asin: '' });
+                renderEditions();
+            }
+
+            function removeEdition(index) {
+                editions.splice(index, 1);
+                renderEditions();
+            }
+
+            function updateEdition(index, field, value) {
+                if (field === 'pages') value = parseInt(value) || 0;
+                editions[index][field] = value;
+                document.getElementById('editionsJSON').value = JSON.stringify(editions);
+            }
+
+            // Initial Render
+            renderEditions();
+        </script>
         <div class="flex items-center justify-between">
             <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                 Update Book

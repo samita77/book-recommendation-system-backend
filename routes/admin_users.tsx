@@ -1,14 +1,15 @@
-const express = require('express');
+import express, { Request, Response, NextFunction } from 'express';
+import { readData, readDataById, insertData, updateData, deleteData } from '../utils/dbOperations';
+import bcrypt from 'bcryptjs';
+import Joi from 'joi';
+import { renderError } from '../utils/adminHelper';
+
 const router = express.Router();
-const { readData, readDataById, insertData, updateData, deleteData } = require('../utils/dbOperations');
-const userSchema = require('../models/userSchema');
 const collectionName = 'users';
 const resourceName = 'User';
-const bcrypt = require('bcryptjs');
-const Joi = require('joi');
 
-// Middleware for validation (re-using the Joi schema from models)
-const validateUser = (req, res, next) => {
+// Middleware for validation
+const validateUser = (req: Request, res: Response, next: NextFunction) => {
   const newUserSchema = Joi.object({
     username: Joi.string().required(),
     password: Joi.string().required(),
@@ -29,50 +30,50 @@ const validateUser = (req, res, next) => {
 
   const { error } = schemaToValidate.validate(req.body);
   if (error) {
-    return res.status(400).render('admin/error', { message: error.details.map(d => d.message).join(', ') });
+    return renderError(res, error.details.map((d: any) => d.message).join(', '));
   }
   next();
 };
 
 // GET all users
-router.get('/', async (req, res) => {
+router.get('/', async (req: Request, res: Response) => {
   const users = await readData(collectionName);
   res.render('admin/users/index', { users });
 });
 
 // GET form to add new user
-router.get('/new', (req, res) => {
+router.get('/new', (req: Request, res: Response) => {
   res.render('admin/users/new', { user: {} });
 });
 
 // POST new user
-router.post('/', validateUser, async (req, res) => {
+router.post('/', validateUser, async (req: Request, res: Response) => {
   try {
     const { username, password } = req.body;
-    const users = await readData(collectionName);
-    const maxIdUser = users.reduce((max, user) => (user.id > max ? user.id : max), -1);
+    const users: any[] = await readData(collectionName);
+    const maxIdUser = users.reduce((max: number, user: any) => (user.id > max ? user.id : max), -1);
     const newId = maxIdUser + 1;
 
     const hashedPassword = await bcrypt.hash(password, 10);
     const newUser = { id: newId, username, password: hashedPassword };
     await insertData(collectionName, newUser);
     res.redirect('/admin/users');
-  } catch (error) {
-    res.render('admin/error', { message: error.message });
+  } catch (error: any) {
+    renderError(res, error.message);
   }
 });
 
 // GET form to edit user
-router.get('/edit/:id', async (req, res) => {
+router.get('/edit/:id', async (req: Request, res: Response) => {
   const user = await readDataById(collectionName, req.params.id);
   if (!user) {
-    return res.render('admin/error', { message: `${resourceName} not found` });
+    return renderError(res, `${resourceName} not found`);
   }
   res.render('admin/users/edit', { user });
 });
 
 // POST update user
-router.post('/edit/:id', validateUser, async (req, res) => {
+router.post('/edit/:id', validateUser, async (req: Request, res: Response) => {
   try {
     const { id, username, password } = req.body;
     let hashedPassword = password;
@@ -82,31 +83,32 @@ router.post('/edit/:id', validateUser, async (req, res) => {
     const updatedUser = { id: parseInt(id), username, password: hashedPassword };
     const result = await updateData(collectionName, req.params.id, updatedUser);
     if (result.matchedCount === 0) {
-      return res.render('admin/error', { message: `${resourceName} not found` });
+      return renderError(res, `${resourceName} not found`);
     }
     res.redirect('/admin/users');
-  } catch (error) {
-    res.render('admin/error', { message: error.message });
+  } catch (error: any) {
+    renderError(res, error.message);
   }
 });
 
 // POST delete user
-router.post('/delete/:id', async (req, res) => {
+router.post('/delete/:id', async (req: Request, res: Response) => {
   try {
     // Prevent deletion of user with id: 0
     const userToDelete = await readDataById(collectionName, req.params.id);
     if (userToDelete && userToDelete.id === 0) {
-      return res.render('admin/error', { message: 'Cannot delete the default admin user.' });
+      return renderError(res, 'Cannot delete the default admin user.');
     }
 
     const result = await deleteData(collectionName, req.params.id);
     if (result.deletedCount === 0) {
-      return res.render('admin/error', { message: `${resourceName} not found` });
+      return renderError(res, `${resourceName} not found`);
     }
     res.redirect('/admin/users');
-  } catch (error) {
-    res.render('admin/error', { message: error.message });
+  } catch (error: any) {
+    renderError(res, error.message);
   }
 });
 
-module.exports = router;
+export default router;
+

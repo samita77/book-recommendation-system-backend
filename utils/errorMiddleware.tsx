@@ -1,4 +1,6 @@
-const errorMiddleware = (err, req, res, next) => {
+import { Request, Response, NextFunction } from "express";
+
+const errorMiddleware = (err: any, req: Request, res: Response, next: NextFunction) => {
   console.error(err.stack);
 
   const statusCode = err.statusCode || 500;
@@ -12,4 +14,4 @@ const errorMiddleware = (err, req, res, next) => {
   });
 };
 
-module.exports = errorMiddleware;
+export default errorMiddleware;

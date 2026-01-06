@@ -1,21 +1,23 @@
-const express = require('express');
-const app = express();
-const config = require('./config');
-const { connectToDb, getDb } = require('./db');
-const errorMiddleware = require('./utils/errorMiddleware');
-const session = require('express-session');
-let db;
-
-const port = config.port;
+import express, { Request, Response } from 'express';
+import session from 'express-session';
+import config from './config';
+import { connectToDb, getDb } from './db';
+import errorMiddleware from './utils/errorMiddleware';
 
 // Import routes
-const bookRoutes = require('./routes/books');
-const authorRoutes = require('./routes/author');
-const editionRoutes = require('./routes/editions');
-const authRoutes = require('./routes/auth');
-const adminRoutes = require('./routes/admin');
-const ratingRoutes = require('./routes/ratings');
+import bookRoutes from './routes/books';
+import authorRoutes from './routes/author';
+// import editionRoutes from './routes/editions';
+import authRoutes from './routes/auth';
+import adminRoutes from './routes/admin';
+import ratingRoutes from './routes/ratings';
 
+import cors from 'cors';
+
+const app = express();
+const port = config.port;
+
+app.use(cors()); // Enable CORS for all origins
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // For parsing form data
 
@@ -31,12 +33,12 @@ app.use(session({
   cookie: { secure: false } // Set to true if using HTTPS
 }));
 
-connectToDb((err) => {
+connectToDb((err?: any) => {
   if (!err) {
     app.listen(port, () => {
       console.log(`Book Recommendation System listening on port ${port}`);
     });
-    db = getDb();
+    // db = getDb(); // Removed unused db variable
   } else {
     console.error('Failed to connect to the database', err);
     process.exit(1);
@@ -45,12 +47,12 @@ connectToDb((err) => {
 
 app.use('/books', bookRoutes);
 app.use('/author', authorRoutes);
-app.use('/editions', editionRoutes);
+// app.use('/editions', editionRoutes);
 app.use('/auth', authRoutes);
 app.use('/admin', adminRoutes);
 app.use('/ratings', ratingRoutes);
 
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response) => {
   res.send('Welcome to Book Recommendation System!');
 });
 

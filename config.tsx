@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   port: 3005,
   dataFiles: {
     authors: "data/author.json",
@@ -22,3 +22,5 @@ module.exports = {
     expiresIn: "1h",
   },
 };
+
+export default config;

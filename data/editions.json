@@ -1,8 +1,8 @@
 {
     "editions": [
         {
-            "id": 301,
-            "bookId": 201,
+            "id": 1,
+            "bookId": 1,
             "format": "Unknown Binding",
             "year": "August 26, 2025",
             "publisher": "Feiweil & Friends",
@@ -10,8 +10,8 @@
             "language": "English"
         },
         {
-            "id": 302,
-            "bookId": 201,
+            "id": 2,
+            "bookId": 1,
             "pages": 352,
             "format": "Hardcover",
             "year": "August 26, 2025",
@@ -21,8 +21,8 @@
             "language": "English"
         },
         {
-            "id": 303,
-            "bookId": 201,
+            "id": 3,
+            "bookId": 1,
             "pages": 345,
             "format": "Kindle Edition",
             "year": "August 26, 2025",
@@ -32,8 +32,8 @@
             "language": "English"
         },
         {
-            "id": 304,
-            "bookId": 202,
+            "id": 4,
+            "bookId": 2,
             "pages": 374,
             "format": "Hardcover",
             "year": "October 14, 2008",
@@ -43,8 +43,8 @@
             "language": "English"
         },
         {
-            "id": 305,
-            "bookId": 202,
+            "id": 5,
+            "bookId": 2,
             "pages": 374,
             "format": "Kindle Edition",
             "year": "September 1, 2009",
@@ -53,8 +53,8 @@
             "language": "English"
         },
         {
-            "id": 306,
-            "bookId": 202,
+            "id": 6,
+            "bookId": 2,
             "pages": 374,
             "format": "Paperback",
             "year": "July 1, 2010",
@@ -64,8 +64,8 @@
             "language": "English"
         },
         {
-            "id": 307,
-            "bookId": 203,
+            "id": 7,
+            "bookId": 3,
             "pages": 391,
             "format": "Hardcover",
             "year": "September 1, 2009",
@@ -75,8 +75,8 @@
             "language": "English"
         },
         {
-            "id": 308,
-            "bookId": 203,
+            "id": 8,
+            "bookId": 3,
             "pages": 439,
             "format": "Kindle Edition",
             "year": "June 3, 2010",
@@ -85,8 +85,8 @@
             "language": "English"
         },
         {
-            "id": 309,
-            "bookId": 203,
+            "id": 9,
+            "bookId": 3,
             "pages": 391,
             "format": "Kindle Edition",
             "year": "June 3, 2010",
@@ -96,8 +96,8 @@
             "language": "English"
         },
         {
-            "id": 310,
-            "bookId": 204,
+            "id": 10,
+            "bookId": 4,
             "pages": 390,
             "format": "Hardcover",
             "year": "August 24, 2010",
@@ -107,8 +107,8 @@
             "language": "English"
         },
         {
-            "id": 311,
-            "bookId": 204,
+            "id": 11,
+            "bookId": 4,
             "pages": 339,
             "format": "Kindle Edition",
             "year": "August 24, 2010",
@@ -117,8 +117,8 @@
             "language": "English"
         },
         {
-            "id": 312,
-            "bookId": 204,
+            "id": 12,
+            "bookId": 4,
             "pages": 390,
             "format": "Paperback",
             "year": "March 1, 2014",
@@ -128,8 +128,8 @@
             "language": "English"
         },
         {
-            "id": 313,
-            "bookId": 205,
+            "id": 13,
+            "bookId": 5,
             "pages": 487,
             "format": "Paperback",
             "year": "Februrary 28, 2012",
@@ -139,8 +139,8 @@
             "language": "English"
         },
         {
-            "id": 314,
-            "bookId": 205,
+            "id": 14,
+            "bookId": 5,
             "pages": 487,
             "format": "Hardcover",
             "year": "April 25, 2011",
@@ -150,8 +150,8 @@
             "language": "English"
         },
         {
-            "id": 315,
-            "bookId": 205,
+            "id": 15,
+            "bookId": 5,
             "pages": 342,
             "format": "Ebook",
             "year": "May 3, 2011",
@@ -160,8 +160,8 @@
             "language": "English"
         },
         {
-            "id": 316,
-            "bookId": 205,
+            "id": 16,
+            "bookId": 5,
             "pages": 342,
             "format": "Kindle Edition",
             "year": "October 21, 2014",
@@ -170,8 +170,8 @@
             "language": "English"
         },
         {
-            "id": 317,
-            "bookId": 206,
+            "id": 17,
+            "bookId": 6,
             "pages": 525,
             "format": "Hardcover",
             "year": "May 1, 2012",
@@ -181,8 +181,8 @@
             "language": "English"
         },
         {
-            "id": 318,
-            "bookId": 206,
+            "id": 18,
+            "bookId": 6,
             "pages": 544,
             "format": "Ebook",
             "year": "May 1, 2012",
@@ -191,8 +191,8 @@
             "language": "English"
         },
         {
-            "id": 319,
-            "bookId": 206,
+            "id": 19,
+            "bookId": 6,
             "pages": 525,
             "format": "Paperback",
             "year": "May 1, 2012",
@@ -202,8 +202,8 @@
             "language": "English"
         },
         {
-            "id": 320,
-            "bookId": 206,
+            "id": 20,
+            "bookId": 6,
             "pages": 545,
             "format": "Kindle Edition",
             "year": "November 7, 2013",
@@ -213,8 +213,8 @@
             "language": "English"
         },
         {
-            "id": 321,
-            "bookId": 207,
+            "id": 21,
+            "bookId": 7,
             "pages": 377,
             "format": "Paperback",
             "year": "March 1, 2006",
@@ -224,8 +224,8 @@
             "language": "English"
         },
         {
-            "id": 322,
-            "bookId": 207,
+            "id": 22,
+            "bookId": 7,
             "pages": 396,
             "format": "Ebook",
             "year": "May 5, 2009",
@@ -234,8 +234,8 @@
             "language": "English"
         },
         {
-            "id": 323,
-            "bookId": 207,
+            "id": 23,
+            "bookId": 7,
             "pages": 396,
             "format": "Kindle Edition",
             "year": "May 2, 2009",
@@ -244,8 +244,8 @@
             "language": "English"
         },
         {
-            "id": 324,
-            "bookId": 207,
+            "id": 24,
+            "bookId": 7,
             "pages": 387,
             "format": "Hardcover",
             "year": "May 2, 2009",
@@ -255,8 +255,8 @@
         },
 
         {
-            "id": 325,
-            "bookId": 208,
+            "id": 25,
+            "bookId": 8,
             "pages": 384,
             "format": "Hardcover",
             "year": "October 6, 2009",
@@ -267,8 +267,8 @@
         },
 
         {
-            "id": 326,
-            "bookId": 208,
+            "id": 26,
+            "bookId": 8,
             "pages": 386,
             "format": "Kindle Edition",
             "year": "October 6, 2009",
@@ -278,8 +278,8 @@
         },
 
         {
-            "id": 327,
-            "bookId": 208,
+            "id": 27,
+            "bookId": 8,
             "pages": 375,
             "format": "Paperback",
             "year": "August 24, 2010",
@@ -290,8 +290,8 @@
         },
 
         {
-            "id": 328,
-            "bookId": 208,
+            "id": 28,
+            "bookId": 8,
             "pages": 11,
             "format": "Audio CD",
             "year": "October 6, 2009",
@@ -302,8 +302,8 @@
         },
 
         {
-            "id": 329,
-            "bookId": 208,
+            "id": 29,
+            "bookId": 8,
             "pages": 406,
             "format": "Hardcover",
             "year": "Februrary 14, 2023",
@@ -314,8 +314,8 @@
         },
 
         {
-            "id": 330,
-            "bookId": 208,
+            "id": 30,
+            "bookId": 8,
             "pages": 423,
             "format": "Kindle Edition",
             "year": "August 7, 2012",
@@ -325,8 +325,8 @@
         },
 
         {
-            "id": 331,
-            "bookId": 208,
+            "id": 31,
+            "bookId": 8,
             "pages": 406,
             "format": "Paperback",
             "year": "May 7, 2013",
@@ -337,8 +337,8 @@
         },
 
         {
-            "id": 331,
-            "bookId": 208,
+            "id": 32,
+            "bookId": 8,
             "pages": 433,
             "format": "Ebook",
             "year": "AUgust 2, 2012",

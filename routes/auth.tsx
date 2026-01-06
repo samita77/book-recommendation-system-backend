@@ -1,25 +1,25 @@
-const express = require("express");
-const router = express.Router();
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-const config = require("../config");
-const { insertData, readData } = require("../utils/dbOperations");
+import express, { Request, Response } from "express";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import config from "../config";
+import { insertData, readData } from "../utils/dbOperations";
 
+const router = express.Router();
 const collectionName = config.mongo.collections.users || "users"; // Assuming a 'users' collection
 
 // Register API
-router.post("/register", async (req, res) => {
+router.post("/register", async (req: Request, res: Response) => {
   try {
     const { username, password } = req.body;
 
     // Check if user already exists
-    const users = await readData(collectionName);
-    if (users.find(user => user.username === username)) {
+    const users: any[] = await readData(collectionName);
+    if (users.find((user: any) => user.username === username)) {
       return res.status(400).json({ message: "User already exists" });
     }
 
     // Generate new user ID
-    const maxIdUser = users.reduce((max, user) => (user.id > max ? user.id : max), -1);
+    const maxIdUser = users.reduce((max: number, user: any) => (user.id > max ? user.id : max), -1);
     const newId = maxIdUser + 1;
 
     // Hash password
@@ -37,13 +37,13 @@ router.post("/register", async (req, res) => {
 });
 
 // Login API
-router.post("/login", async (req, res) => {
+router.post("/login", async (req: Request, res: Response) => {
   try {
     const { username, password } = req.body;
 
     // Check if user exists
-    const users = await readData(collectionName);
-    const user = users.find(u => u.username === username);
+    const users: any[] = await readData(collectionName);
+    const user = users.find((u: any) => u.username === username);
     if (!user) {
       return res.status(400).json({ message: "Invalid credentials" });
     }
@@ -65,4 +65,4 @@ router.post("/login", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
